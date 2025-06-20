@@ -20,7 +20,7 @@ class Product {
 
 public class Commerce {
 
-    // Normalize for plural handling (e.g., "shoes" → "shoe")
+    
     public static String normalize(String word) {
         if (word.toLowerCase().endsWith("s") && word.length() > 3) {
             return word.substring(0, word.length() - 1).toLowerCase();

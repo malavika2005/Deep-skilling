@@ -1,6 +1,6 @@
 public class Main {
 
-    // Singleton Logger class defined as an inner static class
+    
     static class Logger {
         private static Logger instance;
 

@@ -1,11 +1,11 @@
 public class Main {
 
-    // Step 2: Define a Document interface
+    
     interface Document {
         void open();
     }
 
-    // Step 3: Concrete Document classes
+    
     static class WordDocument implements Document {
         public void open() {
             System.out.println("Opening Word document...");
@@ -24,12 +24,10 @@ public class Main {
         }
     }
 
-    // Step 4: Abstract Factory
     static abstract class DocumentFactory {
         public abstract Document createDocument();
     }
 
-    // Concrete Factories
     static class WordDocumentFactory extends DocumentFactory {
         public Document createDocument() {
             return new WordDocument();
@@ -47,8 +45,6 @@ public class Main {
             return new ExcelDocument();
         }
     }
-
-    // Step 5: Main method to test the factory pattern
     public static void main(String[] args) {
         DocumentFactory wordFactory = new WordDocumentFactory();
         DocumentFactory pdfFactory = new PdfDocumentFactory();

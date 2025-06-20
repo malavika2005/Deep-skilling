@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Forecast {
 
-    // Recursive method to calculate future value
+    
     public static double futureValueRecursive(double presentValue, double rate, int years) {
         if (years == 0) {
             return presentValue;
@@ -10,7 +10,7 @@ public class Forecast {
         return futureValueRecursive(presentValue, rate, years - 1) * (1 + rate);
     }
 
-    // Optimized version using memoization (optional)
+   
     public static double futureValueMemo(double presentValue, double rate, int years, Double[] memo) {
         if (years == 0) return presentValue;
         if (memo[years] != null) return memo[years];
